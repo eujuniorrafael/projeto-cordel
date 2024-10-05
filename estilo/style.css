@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*vh = view hight / altura da tela*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    font-family: var(--fonte2);
+    font-size: 8vw; /* vw = view width = largura da tela / o número representa a porcentagem, ex.: 7% da largura da tela = 7vw*/
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header > p {
+    padding-bottom: 50px;
+    font-size: 2.5vw;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+}
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.715);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px black; /*inset = para dentro*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+
+}
+section.imagem#img02{
+    background-image: url(../imagens/background002.jpg);
+}
+
+section.normal > p {
+    padding: 20px;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.589);
+    /*width: 400px;*//* #A caixa não se adapta ao conteúdo */
+    display: inline-block; /* #Transforma numa caixa que se adapta ao conteúdo, basta dar um padding para colocar um espaço interno*/
+    padding: 20px;
+    text-shadow: 1px 1px 0px black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
